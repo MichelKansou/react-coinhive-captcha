@@ -1,21 +1,43 @@
 {
   "name": "react-coinhive-captcha",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Mine cryptocurrency when you want to verify your users are not bots.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "dependencies": {
+    "@babel/cli": "^7.1.2",
+    "load-script": "^1.0.0",
+    "node-sass": "^4.9.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "peerDependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichelKansou/react-coinhive-captcha.git"
+  },
+  "author": "Michel Kansou",
+  "homepage": "",
+  "license": "MIT",
   "browserslist": [
     ">0.2%",
     "not dead",

@@ -1,0 +1,82 @@
+.captcha-container {
+    background-color: #fbfbfb;
+    border: 1px solid #b2bec3;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 350px;
+    .verified-column {
+        display: flex;
+        align-items: center;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        p {
+            margin-left: 0.5em;
+        }
+    }
+    .captcha-btn-container {
+        display: flex;
+        align-items: center;
+        button {
+            width: 35px;
+            height: 35px;
+            border: 2px solid;
+            border-radius: 4px;
+            outline: none;
+            &:hover {
+                cursor: pointer;
+                background-color: #dfe6e9;
+            }
+        }
+        p {
+            margin: 0 1em;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    .bar {
+        display: block;
+        height: 30px;
+        width: 60%;
+        background-color: #dfe6e9;
+        animation: animatedWidth 1s ease;
+        .progress {
+            display: block;
+            width: 0%;
+            background-color: #E1467C;
+            height: 100%;
+            transition: width 2s;
+        }
+    }
+    .aside-column {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        p {
+            font-size: 15px;
+        }
+        a {
+            cursor: pointer;
+            font-size: 15px;
+            color: #636e72;
+        }
+    }
+    p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@keyframes animatedWidth {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 60%;
+    }
+}
